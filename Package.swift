@@ -9,13 +9,13 @@ let package = Package(
         .library(name: "Argon2", targets: ["Argon2"]),
     ],
     dependencies: [
-        .package(name: "cArgon2", url: "https://github.com/youjinp/argon2", from: "0.0.1")
+        .package(name: "c-argon2", url: "https://github.com/youjinp/argon2", from: "0.0.2")
     ],
     targets: [
         .target(
             name: "Argon2",
             dependencies: [
-                "cArgon2"
+                .product(name: "CArgon2", package: "c-argon2")
             ]),
         .testTarget(
             name: "Argon2Tests",
