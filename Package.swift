@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "Argon2", targets: ["Argon2"]),
     ],
     dependencies: [
-        .package(name: "cArgon2", url: "https://github.com/youjinp/argon2", .branch("swift"))
+        .package(name: "cArgon2", url: "https://github.com/youjinp/argon2", from: "0.0.1")
     ],
     targets: [
         .target(
